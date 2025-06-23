@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "groupName": "python requirements",
+      "description": "Group Python requirements update into a single PR",
+      "matchFileNames": [
+        "sbom-utility-scripts/**/requirements-dev.txt",
+        "sbom-utility-scripts/**/requirements-test.txt",
+        
+        "source-container-build/**/requirements-dev.txt",
+        "source-container-build/**/requirements-test.txt"
+      ]
+    }
+  ]
+}
